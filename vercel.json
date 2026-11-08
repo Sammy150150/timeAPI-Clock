@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/time",
+      "destination": "https://timeapi.io/api/v1/time/current/zone"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/time",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    }
+  ]
+}
